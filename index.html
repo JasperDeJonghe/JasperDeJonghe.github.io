@@ -1,115 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Jasper De Jonghe - Portfolio</title>
-</head>
-<body>
-    <nav>
-        <button class="mobile-menu-button">&#9776; Menu</button>
-        <div class="container">
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jasper De Jonghe · Portfolio</title>
+  <meta name="description" content="Portfolio of Jasper De Jonghe, Multimedia and Creative Technologies student in Kortrijk.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&family=Hanken+Grotesk:ital,wght@0,400;0,500;1,400&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="page">
     <header>
-        <div class="container">
-            <h1>Jasper De Jonghe</h1>
-            <p>Information and Communication Technology Student</p>
-        </div>
+      <h1 class="site-title">JDJ</h1>
+      <nav aria-label="Main">
+        <a href="#work">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                Hey there, I'm Jasper De Jonghe, a student exploring the world of Information and Communication Technology in High School. I love diving into new programming languages and currently enjoy tinkering with Python, C#, and the trio of HTML, CSS, and JavaScript to build cool things. <br><br>
-                When I'm not coding, you can find me with my headphones on, enjoying some good music. I'm also a gaming enthusiast—there's nothing like a good game to unwind and have fun. <br> <br>
-            </p>
-        </div>
-    </section>
+    <main>
+      <section class="intro">
+        <div class="photo"><img src="images/me.jpg" alt="Profile photo"></div>
+        <h2>Hello, my name is Jasper De Jonghe.</h2>
+        <p>I'm a student based in Belgium. I study Multimedia and Creative Technologies in Kortrijk.</p>
+        <p class="small">My interests are networking, electronics, IoT and playing guitar.</p>
+        <p><a href="#contact">Contact me</a></p>
+      </section>
 
-    <section id="projects">
-        <div class="container">
-            <!-- Python Projects -->
-            <h3 class="projectHeader">Python Projects</h3>
-            <div class="project Python" id="project1py">
-                <img src="project1py.jpg" alt="Project 1 Python">
-                <div class="project-details">
-                    <h3>Project 1 - Python</h3>
-                    <p>Description of Project 1.</p>
-                </div>
-            </div>
+      <section class="projects" id="work">
+        <h2>My projects</h2>
 
-            <div class="project Python" id="project2py">
-                <img src="project2py.jpg" alt="Project 2 Python">
-                <div class="project-details">
-                    <h3>Project 2 - Python</h3>
-                    <p>Description of Project 2.</p>
-                </div>
-            </div>
+        <!-- For a real screenshot, replace the .shot div with:
+             <img class="shot" src="images/project-1.jpg" alt="Screenshot of Project title one"> -->
+        <article class="project">
+          <img class="shot" src="images/judge-thredd.jpg" alt="Judge Thredd Discord bot cover image">
+          <div>
+            <h3>Judge Thredd</h3>
+            <p class="meta">Discord bot, Python · 2026</p>
+            <p>A Discord bot for the Codédex server that tracks who answers the most questions in chosen channels and rewards the top helper each week with a special role.</p>
+            <a href="https://www.codedex.io/community/project-showcase/xPYxlrHZIumEpPc93fEE" target="_blank" rel="noopener">View on Codédex</a>
+          </div>
+        </article>
 
-            <!--other Python projects -->
+        <article class="project">
+          <img class="shot" src="images/wled-lamp.jpg" alt="Twisted lamp glowing blue in a dark room">
+          <div>
+            <h3>WLED lamp</h3>
+            <p class="meta">Electronics, IoT · 2026</p>
+            <p>A smart lamp powered by an ESP32 Super Mini that drives a NeoPixel LED strip inside the shade. It runs WLED, so I can change colours, brightness and effects from my phone over Wi-Fi.</p>
+          </div>
+        </article>
 
-            <!-- C# Projects -->
-            <h3 class="projectHeader">C# Projects</h3>
-            <div class="project CSharp" id="project1C#">
-                <img src="project1C#.jpg" alt="Project 1 C#">
-                <div class="project-details">
-                    <h3>Project 1 - C#</h3>
-                    <p>Description of Project 1.</p>
-                </div>
-            </div>
+        <article class="project">
+          <img class="shot" src="images/smartpack.jpg" alt="SmartPack backpack next to a phone showing the route dashboard">
+          <div>
+            <h3>SmartPack</h3>
+            <p class="meta">Raspberry Pi, IoT · 2026</p>
+            <p>A backpack that checks your posture and tracks your route with GPS. Stretch sensors in the shoulder straps notice when you carry it wrong, and vibration motors warn you right away. A Raspberry Pi stores the data and serves a live web dashboard.</p>
+            <a href="https://www.instructables.com/SmartPack-a-Smart-Posture-and-GPS-Monitoring-Backp/" target="_blank" rel="noopener">View on Instructables</a>
+          </div>
+        </article>
 
-            <div class="project CSharp" id="project2C#">
-                <img src="project2C#.jpg" alt="Project 2 C#">
-                <div class="project-details">
-                    <h3>Project 2 - C#</h3>
-                    <p>Description of Project 2.</p>
-                </div>
-            </div>
+        <article class="project">
+          <img class="shot" src="images/oc.svg" alt="Illustration of red squares on a table, some holding blue cards, read as the binary number 01001101">
+          <div>
+            <h3>OC: binary learning game</h3>
+            <p class="meta">Python, OpenCV · 2025</p>
+            <p>A game that teaches binary numbers with cards on a table. A webcam spots red squares, and a blue card in a square counts as a 1. The program reads the row as a binary number, compares it with a random target and keeps score in a Tkinter window.</p>
+            <a href="https://github.com/JasperDeJonghe/OC" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+      </section>
 
-            <!--other C# projects -->
+      <section class="projects" id="contributions">
+        <h2>Contributions</h2>
 
-            <!-- Web Development Projects -->
-            <h3 class="projectHeader">Web Development Projects</h3>
-            <div class="project WebApps" id="project1WebDev">
-                <img src="project1WebDev.jpg" alt="Project 1 WebDev">
-                <div class="project-details">
-                    <h3>Project 1 - Web Development</h3>
-                    <p>Description of Project 1.</p>
-                </div>
-            </div>
+        <article class="project">
+          <img class="shot" src="images/fly-game.png" alt="The fly character from FLY flying past clouds, with a lantern below">
+          <div>
+            <h3>FLY</h3>
+            <p class="meta">Godot, GDScript · 2024</p>
+            <p>A mobile arcade game made in Godot where you steer a fly past twigs and collect flowers for more stamina. I added the parallax background, saving of the high score, the game over screen and the lamp.</p>
+            <a href="https://github.com/JasperDeJonghe/fly-game" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+      </section>
 
-            <div class="project WebApps" id="project2WebDev">
-                <img src="project2WebDev.jpg" alt="Project 2 WebDev">
-                <div class="project-details">
-                    <h3>Project 2 - Web Development</h3>
-                    <p>Description of Project 2.</p>
-                </div>
-            </div>
+      <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <p>The easiest way to reach me is by email: <a href="mailto:jasper.de.jonghe.07@gmail.com">jasper.de.jonghe.07@gmail.com</a></p>
+        <p>You can also find me on <a href="https://www.linkedin.com/in/jasper-de-jonghe/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+      </section>
+    </main>
 
-            <!--other Web Development projects -->
-
-
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:jasper.de.jonghe.07@gmail.com" target="_blank">jasper.de.jonghe.07@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/Jasperdj317" target="_blank">github.com/Jasperdj317</a></p>
-            <p id="copyright">&copy; 2023 Jasper De Jonghe - Portfolio</p>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+    <footer>Jasper De Jonghe, 2026</footer>
+  </div>
 </body>
+
 </html>
