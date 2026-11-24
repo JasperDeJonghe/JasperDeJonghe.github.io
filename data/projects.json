@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "title": "Judge Thredd Test",
+      "title": "Judge Thredd",
       "meta": "Discord bot, Python · 2026",
       "description": "A Discord bot for the Codédex server that tracks who answers the most questions in chosen channels and rewards the top helper each week with a special role.",
       "image": "images/judge-thredd.jpg",
