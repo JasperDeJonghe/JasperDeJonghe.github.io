@@ -1,0 +1,61 @@
+# Sveltia CMS configuration: https://sveltiacms.app/en/docs
+# This file is public. Never put tokens or secrets in it.
+
+backend:
+  name: github
+  repo: JasperDeJonghe/Portfolio
+  branch: main
+  commit_messages:
+    update: "Update {{collection}} via admin"
+    uploadMedia: "Upload {{path}} via admin"
+    deleteMedia: "Delete {{path}} via admin"
+
+site_url: https://jasperdejonghe.github.io/Portfolio/
+display_url: https://jasperdejonghe.github.io/Portfolio/
+
+# Uploaded images are committed to /images in the repo.
+media_folder: images
+public_folder: /images
+
+collections:
+  - name: portfolio
+    label: Portfolio
+    files:
+      - name: projects
+        label: Projects
+        file: data/projects.json
+        fields:
+          - name: projects
+            label: My projects
+            label_singular: Project
+            widget: list
+            summary: "{{title}} ({{meta}})"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: meta, label: "Subtitle (e.g. Python, IoT · 2026)", widget: string, required: false }
+              - { name: description, label: Description, widget: text }
+              - { name: image, label: Image, widget: image }
+              - { name: alt, label: "Image description (for screen readers)", widget: string }
+              - name: link
+                label: Link
+                widget: string
+                required: false
+                pattern: ['^https?://', 'Must start with https://']
+              - { name: link_label, label: "Link text (e.g. View on GitHub)", widget: string, required: false }
+          - name: contributions
+            label: Contributions
+            label_singular: Contribution
+            widget: list
+            summary: "{{title}} ({{meta}})"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: meta, label: "Subtitle (e.g. Python, IoT · 2026)", widget: string, required: false }
+              - { name: description, label: Description, widget: text }
+              - { name: image, label: Image, widget: image }
+              - { name: alt, label: "Image description (for screen readers)", widget: string }
+              - name: link
+                label: Link
+                widget: string
+                required: false
+                pattern: ['^https?://', 'Must start with https://']
+              - { name: link_label, label: "Link text (e.g. View on GitHub)", widget: string, required: false }

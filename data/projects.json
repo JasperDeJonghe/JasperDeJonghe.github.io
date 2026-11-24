@@ -1,0 +1,49 @@
+{
+  "projects": [
+    {
+      "title": "Judge Thredd",
+      "meta": "Discord bot, Python · 2026",
+      "description": "A Discord bot for the Codédex server that tracks who answers the most questions in chosen channels and rewards the top helper each week with a special role.",
+      "image": "images/judge-thredd.jpg",
+      "alt": "Judge Thredd Discord bot cover image",
+      "link": "https://www.codedex.io/community/project-showcase/xPYxlrHZIumEpPc93fEE",
+      "link_label": "View on Codédex"
+    },
+    {
+      "title": "WLED lamp",
+      "meta": "Electronics, IoT · 2026",
+      "description": "A smart lamp powered by an ESP32 Super Mini that drives a NeoPixel LED strip inside the shade. It runs WLED, so I can change colours, brightness and effects from my phone over Wi-Fi.",
+      "image": "images/wled-lamp.jpg",
+      "alt": "Twisted lamp glowing blue in a dark room"
+    },
+    {
+      "title": "SmartPack",
+      "meta": "Raspberry Pi, IoT · 2026",
+      "description": "A backpack that checks your posture and tracks your route with GPS. Stretch sensors in the shoulder straps notice when you carry it wrong, and vibration motors warn you right away. A Raspberry Pi stores the data and serves a live web dashboard.",
+      "image": "images/smartpack.jpg",
+      "alt": "SmartPack backpack next to a phone showing the route dashboard",
+      "link": "https://www.instructables.com/SmartPack-a-Smart-Posture-and-GPS-Monitoring-Backp/",
+      "link_label": "View on Instructables"
+    },
+    {
+      "title": "OC: binary learning game",
+      "meta": "Python, OpenCV · 2025",
+      "description": "A game that teaches binary numbers with cards on a table. A webcam spots red squares, and a blue card in a square counts as a 1. The program reads the row as a binary number, compares it with a random target and keeps score in a Tkinter window.",
+      "image": "images/oc.svg",
+      "alt": "Illustration of red squares on a table, some holding blue cards, read as the binary number 01001101",
+      "link": "https://github.com/JasperDeJonghe/OC",
+      "link_label": "View on GitHub"
+    }
+  ],
+  "contributions": [
+    {
+      "title": "FLY",
+      "meta": "Godot, GDScript · 2024",
+      "description": "A mobile arcade game made in Godot where you steer a fly past twigs and collect flowers for more stamina. I added the parallax background, saving of the high score, the game over screen and the lamp.",
+      "image": "images/fly-game.png",
+      "alt": "The fly character from FLY flying past clouds, with a lantern below",
+      "link": "https://github.com/JasperDeJonghe/fly-game",
+      "link_label": "View on GitHub"
+    }
+  ]
+}
