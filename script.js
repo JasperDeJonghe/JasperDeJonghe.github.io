@@ -31,11 +31,15 @@ function renderProject(project) {
 
     const src = imagePath(project.image);
     if (src) {
+        const frame = el("div", "shot-frame");
         const img = el("img", "shot");
         img.src = src;
         img.alt = project.alt || "";
         img.loading = "lazy";
-        article.append(img);
+        frame.append(img);
+        article.append(frame);
+    } else {
+        article.classList.add("no-image");
     }
 
     const body = el("div");
@@ -56,6 +60,25 @@ function renderProject(project) {
     return article;
 }
 
+// Projects ease in when they scroll into view. The CSS only animates
+// when the visitor allows motion; otherwise .reveal does nothing.
+function revealOnScroll(items) {
+    if (!("IntersectionObserver" in window)) return;
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { rootMargin: "0px 0px -10% 0px" });
+
+    items.forEach(function (item) {
+        item.classList.add("reveal");
+        observer.observe(item);
+    });
+}
+
 async function loadProjects() {
     const lists = document.querySelectorAll("[data-projects]");
     try {
@@ -68,6 +91,7 @@ async function loadProjects() {
             list.replaceChildren(...items.map(renderProject));
             list.closest("section").hidden = items.length === 0;
         });
+        revealOnScroll(document.querySelectorAll(".project"));
     } catch (error) {
         console.error("Could not load projects:", error);
         lists.forEach(function (list) {
