@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "title": "Judge Thredd",
+      "title": "Judge Thredd Test",
       "meta": "Discord bot, Python · 2026",
       "description": "A Discord bot for the Codédex server that tracks who answers the most questions in chosen channels and rewards the top helper each week with a special role.",
       "image": "images/judge-thredd.jpg",
@@ -14,7 +14,9 @@
       "meta": "Electronics, IoT · 2026",
       "description": "A smart lamp powered by an ESP32 Super Mini that drives a NeoPixel LED strip inside the shade. It runs WLED, so I can change colours, brightness and effects from my phone over Wi-Fi.",
       "image": "images/wled-lamp.jpg",
-      "alt": "Twisted lamp glowing blue in a dark room"
+      "alt": "Twisted lamp glowing blue in a dark room",
+      "link": "",
+      "link_label": ""
     },
     {
       "title": "SmartPack",
