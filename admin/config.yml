@@ -3,15 +3,15 @@
 
 backend:
   name: github
-  repo: JasperDeJonghe/Portfolio
+  repo: JasperDeJonghe/JasperDeJonghe.github.io
   branch: main
   commit_messages:
     update: "Update {{collection}} via admin"
     uploadMedia: "Upload {{path}} via admin"
     deleteMedia: "Delete {{path}} via admin"
 
-site_url: https://jasperdejonghe.github.io/Portfolio/
-display_url: https://jasperdejonghe.github.io/Portfolio/
+site_url: https://jasperdejonghe.github.io/
+display_url: https://jasperdejonghe.github.io/
 
 # Uploaded images are committed to /images in the repo.
 media_folder: images
